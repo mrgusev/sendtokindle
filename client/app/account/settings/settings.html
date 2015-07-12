@@ -5,34 +5,26 @@
     <div class="col-sm-12">
       <h3>Settings</h3>
     </div>
-    <div class="col-sm-12">
-      <form class="form" name="form" ng-submit="updateUser(form)" novalidate>
+    <form class="col s12" name="form" ng-submit="updateUser(form)" novalidate>
 
-        <div class="form-group">
-          <label>Name</label>
-
-          <input type="text" name="name" class="form-control" ng-model="user.name"
-                 mongoose-error/>
-          <p class="help-block" ng-show="form.name.$error.mongoose">
-              {{ errors.other }}
-          </p>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="first_name" name="name" type="text" mongoose-error ng-model="user.name" class="validate">
+          <label for="first_name" class="active">Name</label>
         </div>
+      </div>
 
-        <div class="form-group">
-          <label>Kindle Email</label>
-
-          <input type="email" name="kindleEmail" class="form-control" ng-model="user.kindleEmail"
-                 ng-minlength="3"/>
-          <p class="help-block"
-             ng-show="(form.kindleEmail.$error.email) && (form.kindleEmail.$dirty || submitted)">
-            This is not a valid kindle email address.
-          </p>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="last_name" name="kindleEmail" type="email" ng-model="user.kindleEmail" class="validate">
+          <label for="last_name" data-error="This is not a valid kindle email address." class="active">Kindle Email</label>
         </div>
+      </div>
 
-        <p class="help-block"> {{ message }} </p>
 
-        <button class="btn btn-lg btn-primary" type="submit">Save changes</button>
-      </form>
-    </div>
+      <p class="help-block"> {{ message }} </p>
+
+      <button class="btn btn-lg btn-primary" type="submit">Save changes</button>
+    </form>
   </div>
 </div>

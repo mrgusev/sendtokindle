@@ -41,6 +41,11 @@ var all = {
     }
   },
 
+  smtp: {
+    username: process.env.SMTP_USERNAME,
+    password: process.env.SMTP_PASSWORD
+  },
+
   facebook: {
     clientID:     process.env.FACEBOOK_ID || 'id',
     clientSecret: process.env.FACEBOOK_SECRET || 'secret',

@@ -3,19 +3,40 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
+    <div class="col s12">
+      <h4 class="center-align">Send a book to your kindle</h4>
     </div>
+    <form class="col s12" name="form" ng-submit="sendBook()" novalidate>
+      <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <input id="first_name" name="name" type="text"
+                 ng-model="bookUrl"
+                 placeholder="Paste a link to the file here" class="validate">
+          <!--<label for="first_name" class="active">Name</label>-->
+        </div>
+      </div>
+      <!--<div class="row">-->
+        <!--<div class="col s6 offset-s3">-->
+          <!--<h5 class="center-align">or</h5>-->
+
+          <!--<div class="file-field input-field">-->
+            <!--<input class="file-path validate" placeholder="Upload a file from your device" type="text"/>-->
+
+              <!--<input type="file"/>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="row">
+        <button class="btn-large upload-button" type="submit">Send</button>
+      </div>
+    </form>
   </div>
 </div>
 
 <footer class="footer">
   <div class="container">
-      <p>Angular Fullstack v2.0.13 |
-        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+    <p>Upload to kindle v0.0.1 |
+      <a href="https://twitter.com/_mad_nomad_">@_mad_nomad_</a> |
+      <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
   </div>
 </footer>
