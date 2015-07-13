@@ -10,15 +10,11 @@ var transporter = nodemailer.createTransport("SMTP", {
   }
 });
 
-function downloadBook(bookUrl){
-
-}
-
 exports.sendBook = function(bookUrl, destinationEmail) {
   var deferred = q.defer();
   console.log('Sending an email...');
 
-  if(!bookUrl){
+  if (!bookUrl) {
     deferred.reject(new Error('No book url specified'));
   }
   transporter.sendMail({
@@ -30,9 +26,10 @@ exports.sendBook = function(bookUrl, destinationEmail) {
       //streamSource
     }]
   }, function(err, info) {
-    if(err) {
+    if (err) {
       console.log(err);
-      return deferred.reject(err);}
+      return deferred.reject(err);
+    }
     console.log('Email sent...');
     deferred.resolve(info);
   });

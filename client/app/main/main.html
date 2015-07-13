@@ -6,28 +6,35 @@
     <div class="col s12">
       <h4 class="center-align">Send a book to your kindle</h4>
     </div>
-    <form class="col s12" name="form" ng-submit="sendBook()" novalidate>
+    <form class="col s12" name="form" ng-submit="sendBook(form)" novalidate>
       <div class="row">
         <div class="input-field col s6 offset-s3">
-          <input id="first_name" name="name" type="text"
+          <loader is-loading="isLoading"/>
+          <input id="first_name" name="name" type="url"
+                 ng-hide="isLoading"
                  ng-model="bookUrl"
+                 required
                  placeholder="Paste a link to the file here" class="validate">
-          <!--<label for="first_name" class="active">Name</label>-->
+          <label for="first_name" data-error="The link is not correct." class="active">&nbsp;</label>
         </div>
+        <p class="center-align col s6 offset-s3">Currently, only <b>.mobi</b> type is supported.</p>
       </div>
       <!--<div class="row">-->
-        <!--<div class="col s6 offset-s3">-->
-          <!--<h5 class="center-align">or</h5>-->
+      <!--<div class="col s6 offset-s3">-->
+      <!--<h5 class="center-align">or</h5>-->
 
-          <!--<div class="file-field input-field">-->
-            <!--<input class="file-path validate" placeholder="Upload a file from your device" type="text"/>-->
+      <!--<div class="file-field input-field">-->
+      <!--<input class="file-path validate" placeholder="Upload a file from your device" type="text"/>-->
 
-              <!--<input type="file"/>-->
-          <!--</div>-->
-        <!--</div>-->
+      <!--<input type="file"/>-->
+      <!--</div>-->
+      <!--</div>-->
       <!--</div>-->
       <div class="row">
-        <button class="btn-large upload-button" type="submit">Send</button>
+        <button class="btn-large upload-button" ng-disabled="isLoading" type="submit">
+          <span ng-hide="isLoading">Send</span>
+          <span ng-show="isLoading">Sending</span>
+        </button>
       </div>
     </form>
   </div>
@@ -36,7 +43,7 @@
 <footer class="footer">
   <div class="container">
     <p>Upload to kindle v0.0.1 |
-      <a href="https://twitter.com/_mad_nomad_">@_mad_nomad_</a> |
+      <a href="https://github.com/mrgusev" target="_blank">@mrgusev</a> |
       <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
   </div>
 </footer>
