@@ -7,8 +7,13 @@ angular.module('kindleUploadApp')
 
     $scope.register = function(form) {
       $scope.submitted = true;
-
       if(form.$valid) {
+        console.log(123)
+        if(!$scope.user.email.endsWith('@kindle.com')){
+          $scope.errors['email'] = 'This is not a valid kindle email.'
+          form['email'].$setValidity('mongoose', false);
+          return;
+        }
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,

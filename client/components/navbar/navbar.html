@@ -7,16 +7,18 @@
     <div class="row">
       <div class="col s12">
         <a href="/" class="brand-logo center">Kindle upload</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down" ng-show="isLoggedIn()">
-          <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
-          </li>
-          <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}">
-            <a href="/admin">Admin</a>
-          </li>
-        </ul>
+        <!--<ul id="nav-mobile" class="left hide-on-med-and-down" ng-show="isLoggedIn()">-->
+          <!--<li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">-->
+            <!--<a ng-href="{{item.link}}">{{item.title}}</a>-->
+          <!--</li>-->
+          <!--<li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}">-->
+            <!--<a href="/admin">Admin</a>-->
+          <!--</li>-->
+        <!--</ul>-->
         <ul class="right hide-on-med-and-down">
-          <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a ui-sref="settings"><i class="mdi-action-settings"></i></a></li>
+          <!--<li ng-show="isLoggedIn()">-->
+            <!--<a href='#demoModal' modal><i class="mdi-action-help"></i></a>-->
+          <!--</li>-->
           <li>
             <a href="" ng-show="isLoggedIn()" ng-click="logout()">
               <i class="mdi-action-settings-power"></i>

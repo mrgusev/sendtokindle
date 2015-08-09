@@ -44,6 +44,7 @@ exports.update = function(req, res, next) {
     if(!user) {return next(new Error('User not found'));}
     user.name = req.body.name || user.name;
     user.kindleEmail = req.body.kindleEmail || user.kindleEmail;
+    user.isAccountSetup = req.body.isAccountSetup || user.isAccountSetup;
     user.save(function(err) {
       if (err) return validationError(res, err);
       res.send(200);

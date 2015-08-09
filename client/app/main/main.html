@@ -8,8 +8,8 @@
     </div>
     <form class="col s12" name="form" ng-submit="sendBook(form)" novalidate>
       <div class="row">
-        <div class="input-field col s6 offset-s3">
-          <loader is-loading="isLoading"/>
+        <div class="input-field col m6 offset-m3 s12">
+          <loader is-loading="isLoading"></loader>
           <input id="first_name" name="name" type="url"
                  ng-hide="isLoading"
                  ng-model="bookUrl"
@@ -17,7 +17,7 @@
                  placeholder="Paste a link to the file here" class="validate">
           <label for="first_name" data-error="The link is not correct." class="active">&nbsp;</label>
         </div>
-        <p class="center-align col s6 offset-s3">Currently, only <b>.mobi</b> type is supported.</p>
+        <!--<p class="center-align col s6 offset-s3">Currently, only <b>.mobi</b> type is supported.</p>-->
       </div>
       <!--<div class="row">-->
       <!--<div class="col s6 offset-s3">-->
@@ -37,6 +37,21 @@
         </button>
       </div>
     </form>
+  </div>
+</div>
+
+<!-- Setup Modal -->
+<div id="demoModal" class="modal modal-fixed-footer" dismissible="false">
+  <div class="modal-content">
+    <h4>Setup your account</h4>
+    <p>Let's to a short one-time setup for your Amazon Kindle account: <br/><br/>
+      Please, visit <a href="https://www.amazon.com/mn/dcw/myx.html#/home/settings/" target="_blank">Manage your devices</a> page
+      and in the <b>Personal Document Settings</b> section add <br/><br/> <b>services.mrgusev@gmail.com</b> <br/><br/>
+      to the <b>Approved Personal Document E-mail List</b> in order to allow our service to upload books to your kindle.
+    </p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close btn-flat ">I did it</a>
   </div>
 </div>
 

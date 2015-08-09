@@ -1,11 +1,13 @@
 
-$fa-font-path: "/bower_components/font-awesome/fonts";
-$roboto-font-path: "/bower_components/materialize/font/roboto/";
-$icons-font-path: "/bower_components/materialize/font/material-design-icons/";
+$fa-font-path: "/bower_components/font-awesome/fonts" !default;
+$roboto-font-path: "/bower_components/materialize/font/roboto/" !default;
+$icons-font-path: "/bower_components/materialize/font/material-design-icons/" !default;
 
+@import 'font-awesome/scss/font-awesome';
+@import 'materialize/sass/materialize';
 
 .input-field label{
-  width: 100%;
+  width: 90%;
 }
 
 //

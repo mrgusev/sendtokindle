@@ -5,7 +5,7 @@ angular
   .directive('loader', function() {
     return {
       restrict: 'E',
-      templateUrl: '/components/loader/loader.html',
+      templateUrl: 'components/loader/loader.html',
       scope: {
         isLoading: '='
       }
