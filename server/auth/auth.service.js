@@ -35,6 +35,23 @@ function isAuthenticated() {
     });
 }
 
+function hasAuthHeader(){
+  return compose()
+    // Validate jwt
+    .use(function(req, res, next) {
+      // allow access_token to be passed through query parameter as well
+      if(req.query && req.query.hasOwnProperty('access_token')) {
+        req.headers.authorization = 'Bearer ' + req.query.access_token;
+      } else if(req.cookies.token){
+        req.headers.authorization = 'Bearer ' +
+        req.cookies.token.replace('\"', '').replace('\"', '')
+      } else {
+        return next();
+      }
+      validateJwt(req, res, next);
+    });
+}
+
 /**
  * Checks if the user role meets the minimum requirements of the route
  */
@@ -74,3 +91,4 @@ exports.isAuthenticated = isAuthenticated;
 exports.hasRole = hasRole;
 exports.signToken = signToken;
 exports.setTokenCookie = setTokenCookie;
+exports.hasAuthHeader = hasAuthHeader;

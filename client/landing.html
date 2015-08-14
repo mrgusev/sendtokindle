@@ -1,74 +1,131 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <base href="/">
-  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Just Send To Kindle</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(client) app/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css({.tmp,client}) app/app.css -->
-  <link rel="stylesheet" href="app/app.css">
+
+  <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- injector:css -->
-  <!-- endinjector -->
-  <!-- endbuild -->
+  <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body ng-app="kindleUploadApp">
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+<body>
+<nav class="white" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo">Just Send To Kinlde</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/login">LOGIN</a></li>
+    </ul>
 
-<!-- Add your site or application content here -->
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="/login">LOGIN</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
 
-  <nav>
-    <div class="nav-wrapper light-green">
-      <div class="row">
-        <div class="col s12">
-          <a href="/" class="brand-logo center">Send to Kindle</a>
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center teal-text text-lighten-2">JUST DO IT</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">The easiest way to upload a book to your kindle</h5>
+      </div>
+      <div class="row center">
+        <a href="/signup" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">do it</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+  <div class="parallax"><img src="assets/images/kindle.jpg" width="100%" alt="Unsplashed background img 1">
+  <div class="parallax-overlay"></div></div>
+</div>
+
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text"><i class="material-icons">wifi</i></h2>
+          <h5 class="center">No more wires</h5>
+
+          <p class="light">Wire sucks. Isn't it better to get a new file on your book without necessary to find a wire, connect it  </p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text"><i class="material-icons">devices</i></h2>
+          <h5 class="center">Works on any device</h5>
+
+          <p class="light">Since this is a web app you can use it on any device. So, you can upload books and articles from
+          internet even on IOS and Windows Mobile platforms.</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text"><i class="material-icons">cloud_download</i></h2>
+          <h5 class="center">Upload or get by link</h5>
+
+          <p class="light">You can remotely upload a file from your device, but also you can just specify a link
+            to file located in the internet, which is usually a way faster. </p>
         </div>
       </div>
     </div>
-  </nav>
 
-<div>
-
+  </div>
 </div>
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-46759818-5');
-  ga('send', 'pageview');
-</script>
+<footer class="page-footer teal">
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col l6 s12">-->
+        <!--<h5 class="white-text">Company Bio</h5>-->
+        <!--<p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>-->
 
-<!--[if lt IE 9]>
-<script src="bower_components/es5-shim/es5-shim.js"></script>
-<script src="bower_components/json3/lib/json3.min.js"></script>
-<![endif]-->
-<!-- build:js({client,node_modules}) app/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/lodash/dist/lodash.compat.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="bower_components/materialize/bin/materialize.js"></script>
-<script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
+
+      <!--</div>-->
+      <!--<div class="col l3 s12">-->
+        <!--<h5 class="white-text">Settings</h5>-->
+        <!--<ul>-->
+          <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
+          <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
+          <!--<li><a class="white-text" href="#!">Link 3</a></li>-->
+          <!--<li><a class="white-text" href="#!">Link 4</a></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+      <!--<div class="col l3 s12">-->
+        <!--<h5 class="white-text">Connect</h5>-->
+        <!--<ul>-->
+          <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
+          <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
+          <!--<li><a class="white-text" href="#!">Link 3</a></li>-->
+          <!--<li><a class="white-text" href="#!">Link 4</a></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <div class="footer-copyright">
+    <div class="container">
+      Made by <a class="brown-text text-lighten-3" target="_blank" href="http://www.mrgusev.com/">@mrgusev</a>
+    </div>
+  </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="assets/js/materialize.min.js"></script>
+<script src="assets/js/init.js"></script>
+
 </body>
 </html>
